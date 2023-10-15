@@ -16,7 +16,6 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 * -Componente que incluya el menu completo del restaurante
 * -Link: 
 
-La aplicación consiste en seleccionar año y mes y poder graficar los valores del dólar a pesos chilenos
 
 ## 2. Tecnologías utilizadas
 * -HTML 5
