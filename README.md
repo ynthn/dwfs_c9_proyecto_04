@@ -20,7 +20,7 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 ## 2. Tecnologías utilizadas
 * -HTML 5
 * -CSS
-* -BOOTSTRAP
+* -REACT BOOTSTRAP
 * -JAVASCRIPT
 * -GIT/GITHUB
 * -NODE.JS (Entorno controlado por eventos diseñado para crear aplicaciones escalables)
@@ -29,3 +29,12 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 * -VITE (Herramienta de compilación)
 * -FIREBASE DATABASE (BD NoSQL)
 * -DEPLOY en NETLIFY
+* -Prototipado con la herramienta proto.io
+
+
+## 3. Prototipo
+![Prototipo](/prototipo.png)
+
+
+## 4. Descripción del proyecto
+* -HEADER: se utilizo REACT BOOTSTRAP para usar el componente de NAVBAR
