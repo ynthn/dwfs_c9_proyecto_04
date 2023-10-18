@@ -33,7 +33,7 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 
 
 ## 3. Prototipo
-![Prototipo](/prototipo.png)
+![Prototipo](/public/prototipo.png)
 
 
 ## 4. Descripción del proyecto
