@@ -22,7 +22,7 @@ const Home = () => {
                                 <Card.Text>
                                     Completa el formulario y reserva tu mesa con hora y fecha
                                 </Card.Text>
-                                <Button variant="primary">Ir Al Servicio</Button>
+                                <Button variant="primary" href="reservar">Ir Al Servicio</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -34,7 +34,7 @@ const Home = () => {
                                 <Card.Text>
                                     Completa el formulario con tus requerimientos y te comunicaremos la disponibilidad
                                 </Card.Text>
-                                <Button variant="primary">Ir Al Servicio</Button>
+                                <Button variant="primary" href="contacto">Ir Al Servicio</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -46,7 +46,7 @@ const Home = () => {
                                 <Card.Text>
                                     Revisa nuestra carta antes de reservar mesa o solicitar para llevar
                                 </Card.Text>
-                                <Button variant="primary">Ir Al Servicio</Button>
+                                <Button variant="primary" href="menu">Ir Al Servicio</Button>
                             </Card.Body>
                         </Card>
                     </div>

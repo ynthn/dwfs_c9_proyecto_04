@@ -1,7 +1,5 @@
 
 
-
-
 const Footer = () => {
     return (
         <>
@@ -17,6 +15,20 @@ const Footer = () => {
                         </div>
                         <div className="col-md-4">
                             <div className="footer-title">Redes Sociales</div>
+
+                            <ul className="footer-rrss">
+                                <li>
+                                    <a href="#">
+                                        <i className="bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i className="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </div>
                         <div className="col-md-4">
                             <div className="footer-title">Horario de atención</div>

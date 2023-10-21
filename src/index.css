@@ -16,11 +16,12 @@ header a {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 900 !important;
+    transition: all ease 0.5s !important;
 }
 
 header a:hover {
-    color: #5A3536;
+    color: #000 !important;
 }
 
 #basic-navbar-nav {
@@ -46,13 +47,34 @@ header a {
 * GENERICOS
 */
 
-.title{
+.title {
     font-size: 30px;
     font-weight: 900;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
+.text-general {
+    text-align: justify;
+    font-size: 15px;
+}
+
+
+/**
+*FORM
+*/
+.btn-reservar {
+    margin-top: 32px;
+}
+
+form label {
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+table {
+    margin-top: 30px;
+}
 
 /*
 *FOOTER
@@ -73,16 +95,129 @@ footer {
 
 .footer-title {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 900;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
+
 .footer-text {
     color: #fff;
     font-size: 14px;
     font-weight: 500;
 }
-.footer-li li{
+
+.footer-li li {
     color: #fff;
     font-size: 14px;
     font-weight: 500;
+}
+
+.footer-rrss {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-rrss li {
+    margin-right: 20px;
+}
+
+.footer-rrss li a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+@media screen and (max-width:900px) {
+
+    /*
+*BANNERS
+*/
+    .carousel-caption {
+        bottom: 10%;
+    }
+}
+
+
+
+
+/*LOADING*/
+.loading {
+    display: none;
+    position: fixed;
+    z-index: 999999999;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.loader {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    border: 3px solid;
+    border-color: #FFF #FFF transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    top: 40%;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #FF3D00 #FF3D00;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+}
+
+.loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
 }

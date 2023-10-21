@@ -29,7 +29,9 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 * -VITE (Herramienta de compilación)
 * -FIREBASE DATABASE (BD NoSQL)
 * -DEPLOY en NETLIFY
-* -Prototipado con la herramienta proto.io
+* -PROTOTIPADO con la herramienta proto.io
+* -IMAGENES desde freepik.es
+* -ICONOS desde icons.getbootstrap.com
 
 
 ## 3. Prototipo
@@ -38,3 +40,7 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 
 ## 4. Descripción del proyecto
 * -HEADER: se utilizo REACT BOOTSTRAP para usar el componente de NAVBAR
+* -SLIDER: se utilizo REACT BOOTSTRAP para usar el componente de CAROUSEL
+* -FOOTER: datos de ubicación y correo electrónico
+* -MENU: Información de la carta del restaurante obtenida desde FIREBASE STORAGE
+* -RESERVAS: Agregar, listar y eliminar Reservas usando FIREBASE STORAGE
