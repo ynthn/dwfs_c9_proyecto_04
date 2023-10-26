@@ -2,14 +2,19 @@ import { useEffect, useState } from "react";
 import { collection, addDoc, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../config/Firebase";
 import Button from 'react-bootstrap/Button';
+import Loading from "../components/Loading";
 
 
 const Reservar = () => {
 
 
+
     /**
      * VALORES INICIALES
      */
+
+    const [stateLoading, setStateLoading] = useState(false);
+
     const valorInicial = {
         fecha: "",
         hora: "",
@@ -37,14 +42,18 @@ const Reservar = () => {
      * ENVIAR DATOS
      */
     async function formReservar(event) {
+        setStateLoading(true);
         event.preventDefault();
         try {
             const collectionRef = collection(db, "reservas");
             await addDoc(collectionRef, {
                 ...cliente
             });
+
         } catch (error) {
             console.log(error)
+        } finally {
+            getReservas();
         }
         setCliente({ ...valorInicial })
     }
@@ -55,6 +64,7 @@ const Reservar = () => {
      * DELETE RESERVA
      */
     async function deleteReserva(id) {
+        setStateLoading(true);
         try {
             const taskDocRef = doc(db, 'reservas', id)
             await deleteDoc(taskDocRef);
@@ -70,6 +80,7 @@ const Reservar = () => {
      */
     const [reservas, setReservas] = useState([]);
     const getReservas = async () => {
+        setStateLoading(true);
         try {
             const collectionRef = collection(db, "reservas");
             const response = await getDocs(collectionRef);
@@ -81,20 +92,27 @@ const Reservar = () => {
             })
 
             setReservas(docs);
-
+            setStateLoading(false);
+            console.log("try");
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            setStateLoading(false);
+            console.log("catch");
+        } finally {
+            setStateLoading(false);
+            console.log("finally");
         }
     }
 
     useEffect(() => {
         getReservas();
-    }, [reservas])
+    }, [])
 
 
 
     return (
         <>
+            <Loading stateLoading={stateLoading} setStateLoading={setStateLoading}></Loading>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">

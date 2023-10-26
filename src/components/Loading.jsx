@@ -1,9 +1,16 @@
-const Loading = () => {
+const Loading = ({ children, stateLoading, setStateLoading }) => {
+
+
 
     return (
-        <div className="loading">
-            <span className="loader"></span>
-        </div>
+        <>
+            {stateLoading &&
+                <div className="loading">
+                    <span className="loader"></span>
+                    {children}
+                </div>
+            }
+        </>
     )
 }
 

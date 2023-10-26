@@ -2,20 +2,24 @@ import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/Firebase";
 import Card from 'react-bootstrap/Card';
+import Loading from "../components/Loading";
 
 const Menu = () => {
 
+    const [stateLoading, setStateLoading] = useState(false);
 
     const [menu, setMenu] = useState([]);
 
     useEffect(() => {
         const getMenu = async () => {
+            setStateLoading(true);
             try {
                 const collectionRef = collection(db, "carta");
                 const response = await getDocs(collectionRef);
 
                 const docs = response.docs.map((doc) => {
                     const data = doc.data() // la informacion de cada documento que guarda firestore
+                    data.id = doc.id;
                     return data
                 })
 
@@ -24,6 +28,9 @@ const Menu = () => {
 
             } catch (error) {
                 console.log(error)
+            }finally{
+                setStateLoading(false);
+                console.log("finally");
             }
         }
         getMenu();
@@ -32,6 +39,7 @@ const Menu = () => {
 
     return (
         <>
+            <Loading stateLoading={stateLoading} setStateLoading={setStateLoading}></Loading>
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
