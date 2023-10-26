@@ -45,4 +45,5 @@ Construir una aplicación web para un restaurante con las siguiente funcionalida
 * -MENU: Información de la carta del restaurante obtenida desde FIREBASE STORAGE
 * -RESERVAS: Agregar, listar y eliminar Reservas usando FIREBASE STORAGE
 * -Uso de props: Componente Loading recibe el parametro de false/true desde el componente Padre
-* -Uso de hooks useState: para mostrar Loading, para almacenar el contenido del menu, para almacenar el contenido de las reservas y para almacenar el valor de las reservas antes de enviar a la base de datos 
+* -Uso de hooks useState: para mostrar Loading, para almacenar el contenido del menu, para almacenar el contenido de las reservas y para almacenar el valor de las reservas antes de enviar a la base de datos
+* -CONTACTO: información de contacto y formulario de contacto que usa props y hooks useState
